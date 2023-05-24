@@ -1,0 +1,18 @@
+apiVersion: food-list/v1
+kind: Deployment
+metadata:
+  name: food-list
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: food-list
+  template:
+    metadata:
+      labels:
+        app: food-list
+    spec:
+      containers:
+        - image: docker.io/landon6599/food-list:0.0.1-SNAPSHOT
+          ports:
+            - containerPort: 80

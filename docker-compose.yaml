@@ -1,0 +1,7 @@
+services:
+  food-list:
+    restart: always
+    build: .
+    image: landon6599/${PROJECT_NAME}:${PROJECT_VERSION}
+    ports:
+      - ${PROJECT_PORT}:8080
